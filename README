@@ -1,0 +1,17 @@
+Make compiles 3 executables: 
+	createdisk, myfilesys and read-img
+
+Create the disk image using:
+	./createdisk diskname.img size(in blocks)
+
+Mount the FUSE filesystem using:
+	sudo ./myfilesys mountfolder
+
+
+A disk image reading tool that used (direct reference to code at 
+http://www.ccs.neu.edu/home/pjd/cs7600-s10/Homework_4_-_due_4-16_01.html)
+is called read-img. To run this, you run the following commands:
+	./read-img diskname.img
+
+
+FUSE functionality limited, but it is related more so to FUSE functions being linked with the code incorrectly rather than non-functional disk operations performed by the code.
