@@ -1,3 +1,5 @@
+A FUSE based FAT file system implementation done as the last assignment for Operating Systems course CS111 Spring16
+
 Make compiles 3 executables: 
 	createdisk, myfilesys and read-img
 
