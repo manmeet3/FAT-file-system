@@ -18,8 +18,11 @@ is called read-img. To run this, you run the following commands:
 
 FUSE functionality limited, but it is related more so to FUSE functions being linked with the code incorrectly rather than non-functional disk operations performed by the code.
 
---------------------------------------------------------------------
+OVERVIEW:
 For a file system of N blocks, first block is reserved for superblock, 1 to k are the File allocation talbe and k+1 and higher are data blocks.
-Each 1kb entry in the FAT block holds 256 pointers (4 bytes/32 bits each -- int). The number of FAT table blocks required are: N/256, since each block can hold 256 pointers.
+Each 1kb entry in the FAT block holds 256 pointers (4 bytes/32 bits each -- int). 
+The number of FAT table blocks required are: N/256, since each block can hold 256 pointers.
 A value of -1 indicates un-writable block, -2 indicates last block in a file, 0 indicates free and anything else points to the next block in the file. 
-In the k+2 and beyond space, there are data clusters containing the file contents and directory clusters containing dir entries and metadata for all files in that directory (file names, timestamps, starting cluster for file data). k+1 is the root directory.
+
+In the k+2 and beyond space, there are data clusters containing the file contents and directory clusters containing dir entries and
+metadata for all files in that directory (file names, timestamps, starting cluster for file data). k+1 is the root directory.
